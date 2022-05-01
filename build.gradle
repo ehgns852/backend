@@ -34,6 +34,7 @@ dependencies {
 	implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
 	implementation group: 'org.springframework', name: 'spring-context-support', version: '5.3.18'
 
+	// Swagger
 	implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
 	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 	implementation("io.swagger:swagger-annotations:1.5.21")
