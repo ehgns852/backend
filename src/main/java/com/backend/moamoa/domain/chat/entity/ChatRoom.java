@@ -31,7 +31,7 @@ public class ChatRoom {
     private boolean isActive;
 
     @Builder
-    public ChatRoom(User host, User guest, boolean isActive) {
+    public ChatRoom(User host, User guest) {
         this.host = host;
         this.guest = guest;
         this.isActive = true;

@@ -22,7 +22,7 @@ public class ChatRoomService {
     private final UserRepository userRepository;
 
     @Transactional
-    public ChatRoom createRoom(CreateChatRoomRequest request) {
+    public Long createRoom(CreateChatRoomRequest request) {
         User host = userUtil.findCurrentUser();
         User guest = userRepository.findById(request.getGuestId())
                 .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_MEMBER));
@@ -30,6 +30,6 @@ public class ChatRoomService {
         return chatRoomRepository.save(ChatRoom.builder()
                 .host(host)
                 .guest(guest)
-                .build());
+                .build()).getId();
     }
 }
